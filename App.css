@@ -1,0 +1,115 @@
+.page-container {
+  padding: 2vh; /* Use viewport height for padding */
+}
+
+.similar-products {
+  position: relative;
+  padding: 2vh; /* Use viewport height for padding */
+}
+
+.heading-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left) */
+  align-items: center;
+   /* Use viewport height for margin */
+}
+
+.heading-container h1 {
+  margin: 0;
+}
+
+.search-bar-container {
+  position: relative; /* Make the container relatively positioned */
+}
+
+.search-bar {
+  position: relative; /* Make the container relatively positioned */
+  width: calc(100% - 4vw); /* Adjust the width to match the container width */
+  padding: 1vh 3vw 1vh 4vw; /* Adjust padding to make space for the icon */
+  border: 0.1vh solid #ddd; /* Use viewport height for border */
+  border-radius: 2vh; /* Use viewport height for border radius */
+  margin-top: 2vh; /* Use viewport height for margin */
+}
+
+.search-icon {
+  position: absolute; /* Position the icon absolute */
+  /* Center vertically */
+  transform: translateY(-140%); /* Center vertically */
+  color: #999; /* Color of the icon */
+  left: 1vw;
+        
+}
+
+.search-input {
+  width: calc(100% - 4vw - 2rem); /* Adjust input width to fit the container */
+  padding-left: 2rem; /* Add padding to the left to make space for icon */
+}
+
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: calc(100% - 8vw); /* Adjust width for smaller screens */
+    padding-left: 5vw; /* Increase left padding to make space for icon */
+  }
+
+  .search-icon {
+    left: 2vw; /* Adjust left position */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-bar {
+    padding-inline-start: 10vw;/* Increase left padding to make space for icon */
+  }
+
+  .search-icon {
+    left: 1vw;
+         /* Adjust top margin to vertically center icon */
+  }
+
+input::placeholder{
+  right:10vw;
+}
+.close-icon {
+  position: absolute;
+  
+  top: 3vh;
+  right: 1vw;
+  cursor: pointer;
+}
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 109%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it's above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; /* Rounded corners */
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+  width: 100%;
+  max-height: calc(100% - 50px); /* Adjust as needed */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  
+  top: 3vh;
+  right: 1vw;
+  cursor: pointer;
+}
+

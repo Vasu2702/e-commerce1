@@ -1,0 +1,127 @@
+.product {
+  margin-bottom: 2vh; /* Use viewport height for margin */
+  margin-right: 2vw;
+  text-align: left; /* Text aligned to the left */
+  background-color: #fff;
+  border: 0.1vh solid #ddd; /* Use viewport height for border width */
+  padding: 2vh; /* Use viewport height for padding */
+  border-radius: 0.5vh; /* Use viewport height for border radius */
+  box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.1); /* Use viewport height for shadow */
+  transition: transform 0.2s ease-in-out; /* Add a hover effect */
+}
+
+.product-card {
+  max-width: 345px;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100%;
+  height: 50vh; /* Use viewport height for image height */
+  object-fit: cover;
+  margin-bottom: 2vh; /* Use viewport height for margin */
+}
+
+.product h5 {
+  margin: 1vh 0; /* Use viewport height for margin */
+}
+
+.product p {
+  margin: 1vh 0; /* Use viewport height for margin */
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1vw; /* Use viewport width for gap */
+  margin-top: 2vh; /* Use viewport height for margin */
+}
+
+.original-price {
+  color: black;
+  font-weight: 800;
+}
+
+.discount-price {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background-color: rgb(204, 51, 4);
+  color: white;
+  padding: 0.5vh 1vw; /* Use viewport height and width for padding */
+  border-radius: 2vh; /* Use viewport height for border radius */
+  text-align: center;
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+.product:hover {
+  transform: scale(1.02); /* Add a slight scale on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    /* Adjust width to fill the container */
+    margin-right: 5vw;
+    padding: 2vh; /* Use viewport height for padding */
+    margin-bottom: 2vh; /* Use viewport height for margin */
+   
+  }
+
+  .product img {
+    height: 30vh; /* Use viewport height for image height */
+    margin-bottom: 1vh; /* Use viewport height for margin */
+  }
+
+  .product h3, .product p {
+    font-size: 0.9em; /* Decrease font size for smaller screens */
+    margin: 1vh 0; /* Use viewport height for margin */
+  }
+
+  .price-container {
+    flex-direction: row; /* Keep prices horizontal */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .original-price, .discount-price, .discount-badge {
+    font-size: 0.8em; /* Decrease font size for smaller screens */
+  }
+
+  .discount-badge {
+    padding: 0.5vh 1vw; /* Use viewport height and width for padding */
+    border-radius: 1vh; /* Adjust border-radius for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    margin-right: 5vw;
+    padding: 1vh; /* Use smaller padding for very small screens */
+    margin-bottom: 1vh; /* Use smaller margin for very small screens */
+   
+  }
+
+  .product img {
+    height: 25vh; /* Use viewport height for image height */
+  }
+
+  .product h5 {
+    font-size: 1em; /* Adjust font size for very small screens */
+  }
+
+  .product p {
+    font-size: 0.6em; /* Adjust font size for very small screens */
+  }
+
+  .original-price, .discount-price, .discount-badge {
+    font-size: 0.5em; /* Adjust font size for very small screens */
+  }
+
+  .discount-badge {
+    padding: 1vh 1vw; /* Use smaller padding for very small screens */
+    border-radius: 0.9vh; /* Adjust border-radius for very small screens */
+  }
+}

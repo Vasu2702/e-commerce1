@@ -1,0 +1,40 @@
+.product-categories {
+  display: flex; /* Arrange buttons horizontally */
+  flex-wrap: wrap; /* Allow buttons to wrap to next line on smaller screens */
+  justify-content: flex-start; /* Align items to the start (left) */
+  margin-bottom: 2vh; /* Use viewport height for margin */
+  margin-top: 0.5vh; /* Optional spacing below buttons */
+}
+
+.category-button {
+  background-color: white; /* White background */
+  border: 0.1vh solid silver; /* Use viewport height for border */
+  padding: 1vh 2vw; /* Use viewport height and width for padding */
+  border-radius: 1vh; /* Use viewport height for border radius */
+  cursor: pointer; /* Indicate clickable button */
+  margin: 1vh; /* Use viewport height for margin */
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .category-button {
+    padding: 0.8vh 1.5vw; /* Adjust padding for smaller screens */
+    font-size: 0.9em; /* Decrease font size for smaller screens */
+  }
+
+  .product-categories {
+    justify-content: center; /* Center align items on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .category-button {
+    padding: 1vh 3vw; /* Adjust padding for very small screens */
+    font-size: 0.8em; /* Decrease font size for very small screens */
+  }
+
+  .product-categories {
+     /* Space around items on very small screens */
+    float: left;
+  }
+}
